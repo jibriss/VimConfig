@@ -1,5 +1,4 @@
 " Plugin manager
-
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -30,5 +29,9 @@ set grepprg=grep\ -r\ --exclude-dir="*/.svn/*"
 " Search
 set hlsearch
 set incsearch
-nnoremap <C-N> :noh<CR>
+nnoremap <silent> <C-N> :noh<CR>
 
+" Remap Plugins
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-P> :call PhpDocSingle()<CR>
+vnoremap <C-P> :call PhpDocRange()<CR> 
