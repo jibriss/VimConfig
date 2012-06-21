@@ -35,3 +35,6 @@ nnoremap <silent> <C-N> :noh<CR>
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR> 
+
+nnoremap <silent> <C-L> :Loremipsum!<CR>
+nnoremap <silent> <C-J> :Loremipsum! 5<CR>
