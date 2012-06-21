@@ -38,3 +38,8 @@ vnoremap <C-P> :call PhpDocRange()<CR>
 
 nnoremap <silent> <C-L> :Loremipsum!<CR>
 nnoremap <silent> <C-J> :Loremipsum! 5<CR>
+inoremap <silent> <C-L> <ESC>:Loremipsum!<CR>a
+inoremap <silent> <C-J> <ESC>:Loremipsum! 5<CR>a
+
+
+
