@@ -14,6 +14,8 @@ set fileencoding=utf-8
 set listchars=tab:»·,eol:¶,trail:·
 set list
 set number
+set laststatus=2
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Loading .apu as PHP files
 filetype on
