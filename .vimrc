@@ -1,9 +1,7 @@
-" Plugin manager
-call pathogen#infect()
-call pathogen#helptags()
+filetype on
+syntax on
 
 " Editor
-syntax on
 set smartindent
 set autoindent
 set tabstop=4
@@ -12,36 +10,11 @@ set expandtab
 set encoding=utf-8
 set fileencoding=utf-8
 set listchars=tab:»·,eol:¶,trail:·
-set list
+"set list
 set number
 set laststatus=2
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-
-" Loading .apu as PHP files
-filetype on
-au BufNewFile,BufRead *.apu set filetype=php
-
-" Filename autocompletion
-set wildmode=list:longest
-set wildmenu
-
-" Grep
-set grepprg=grep\ -r\ --exclude-dir="*/.svn/*"
 
 " Search
 set hlsearch
 set incsearch
-nnoremap <silent> <C-N> :noh<CR>
-
-" Remap Plugins
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
-nnoremap <C-P> :call PhpDocSingle()<CR>
-vnoremap <C-P> :call PhpDocRange()<CR> 
-
-nnoremap <silent> <C-L> :Loremipsum!<CR>
-nnoremap <silent> <C-J> :Loremipsum! 5<CR>
-inoremap <silent> <C-L> <ESC>:Loremipsum!<CR>a
-inoremap <silent> <C-J> <ESC>:Loremipsum! 5<CR>a
-
-
-
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
